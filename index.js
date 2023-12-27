@@ -1,36 +1,5 @@
-import { itemData, listData } from "./JS/data/data.js";
-import { itemProps } from "./JS/data/props.js";
+import { initList } from "./JS/controllers/init/initList.js";
 import { initMenu } from "./JS/menu.js";
-
-const ItemView = (itemData, props) => {
-    return `<li class="item">
-    <p class="item__text">${itemData.text}</p>
-    <menu class="item__menu">
-        <nav class="item__menu__control-btns">
-            <button class="update-item">${props.update}</button>
-            <button class="delete-item">${props.delete}</button>
-        </nav>
-        <button class="read-item">${props.read}</button>
-    </menu>
-</li>`;
-};
-
-const readListView = (readList) => {
-    return readList
-        .map((itemId) => {
-            return ItemView(itemData[itemId], itemProps);
-        })
-        .join(" ");
-};
-
-const renderList = (listId) => {
-    const readListContainer = document.querySelector(".read-list");
-    readListContainer.innerHTML = readListView(listData[listId]);
-};
-
-const initList = () => {
-    renderList("todo");
-};
 
 (function () {
     initMenu();
