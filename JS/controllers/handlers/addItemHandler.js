@@ -34,7 +34,7 @@ const onAddSubmit = (event) => {
     dialog.removeEventListener("submit", onAddSubmit);
 };
 
-export const addItemHandler = (event) => {
+export const addItemHandler = () => {
     showDialog();
     dialog.addEventListener("submit", onAddSubmit);
 };
