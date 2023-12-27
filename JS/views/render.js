@@ -1,7 +1,7 @@
 import { listData } from "../data/data.js";
-import { readListView } from "./readListView.js";
+import { ReadListView } from "./ReadListView.js";
 
 export const renderList = (listId) => {
     const readListContainer = document.querySelector(".read-list");
-    readListContainer.innerHTML = readListView(listData[listId]);
+    readListContainer.innerHTML = ReadListView(listData[listId]);
 };
