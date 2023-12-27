@@ -1,3 +1,9 @@
+import { initMenu } from "./JS/menu";
+
+(function () {
+    initMenu();
+})();
+
 const dialog = document.querySelector(".modal");
 
 const showDialog = () => {
