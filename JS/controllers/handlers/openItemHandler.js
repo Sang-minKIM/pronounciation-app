@@ -1,3 +1,3 @@
 export const openItemHandler = (target) => {
-    target.classList.toggle("expanded");
+    target.closest(".item").classList.toggle("expanded");
 };
