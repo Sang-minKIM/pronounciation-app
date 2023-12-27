@@ -1,3 +1,4 @@
+import { onMenuClick } from "./controllers/event/onClick.js";
 import { menuProps } from "./data/props.js";
 
 const menu = document.querySelector(".menu");
@@ -11,7 +12,12 @@ export const MenuView = ({ add, low, high, speedText }) => {
     </article>`;
 };
 
+const initEventListener = () => {
+    menu.addEventListener("click", onMenuClick);
+};
+
 export const initMenu = () => {
     const menuHTML = MenuView(menuProps);
     menu.innerHTML = menuHTML;
+    initEventListener();
 };
