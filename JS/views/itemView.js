@@ -1,5 +1,5 @@
 export const ItemView = (itemData, props) => {
-    return `<li class="item">
+    return `<li id="${itemData.id}" class="item">
     <p class="item__text">${itemData.text}</p>
     <menu class="item__menu">
         <nav class="item__menu__control-btns">
