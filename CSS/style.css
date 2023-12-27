@@ -13,6 +13,7 @@ body {
     color: white;
     padding: 1.25rem 0;
     overflow-y: hidden;
+    touch-action: none;
 }
 
 .menu {
@@ -62,6 +63,7 @@ body {
     min-width: 300px;
     max-width: 720px;
     overflow-y: scroll;
+    touch-action: pan-y;
     gap: 20px;
 }
 
