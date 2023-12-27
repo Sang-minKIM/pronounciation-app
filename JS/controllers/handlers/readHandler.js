@@ -16,15 +16,15 @@ export const readItemHandler = (target) => {
     }
 };
 
-export const changeSpeed = (type) => {
-    if (type === "increase") {
+export const changeSpeedHandler = (target) => {
+    if (target.classList[0] === "menu__speed--high") {
         speechSpeed += 0.1;
-    } else if (type === "decrease") {
+    } else if (target.classList[0] === "menu__speed--low") {
         speechSpeed -= 0.1;
     }
 
     // 최소 및 최대 속도 제한 (0.1에서 10까지)
     speechSpeed = Math.max(0.1, Math.min(10, speechSpeed));
 
-    document.querySelector("h3").innerText = `읽기 속도: ${speechSpeed.toFixed(1)}`;
+    document.querySelector(".menu__speed__text").innerText = `읽기 속도: ${speechSpeed.toFixed(1)}`;
 };

@@ -2,7 +2,7 @@ import { addItemHandler } from "../handlers/addItemHandler.js";
 import { deleteItemHandler } from "../handlers/deleteItemHandler.js";
 import { closeDialog } from "../handlers/modalHandler.js";
 import { openItemHandler } from "../handlers/openItemHandler.js";
-import { readItemHandler } from "../handlers/readHandler.js";
+import { changeSpeedHandler, readItemHandler } from "../handlers/readHandler.js";
 import { updateItemHandler } from "../handlers/updateItemHandler.js";
 
 const clickHandlerMap = {
@@ -11,6 +11,8 @@ const clickHandlerMap = {
     "delete-item": deleteItemHandler,
     "update-item": updateItemHandler,
     "read-item": readItemHandler,
+    "menu__speed--low": changeSpeedHandler,
+    "menu__speed--high": changeSpeedHandler,
 };
 
 export const onMenuClick = (event) => {
