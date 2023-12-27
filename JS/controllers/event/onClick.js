@@ -23,7 +23,6 @@ export const onMenuClick = (event) => {
 
 export const onListClick = (event) => {
     const { target } = event;
-    console.log(target);
     const executeHandler = clickHandlerMap[target.classList[0]];
 
     if (executeHandler) {

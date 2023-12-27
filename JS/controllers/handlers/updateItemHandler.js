@@ -6,9 +6,8 @@ const dialog = document.querySelector(".modal");
 
 const updateItemData = (updatedItemId, formData) => {
     const text = formData.get("text");
-    console.log(itemData[updatedItemId]);
+
     itemData[updatedItemId] = { ...itemData[updatedItemId], text };
-    console.log(itemData[updatedItemId]);
 };
 
 const updateItem = (updatedItemId, formData) => {
@@ -16,7 +15,6 @@ const updateItem = (updatedItemId, formData) => {
     const listId = "todo";
     updateItemData(updatedItemId, formData);
     renderList(listId);
-    console.log("execute updateItem");
 };
 
 const fillFormWithItemData = (itemId) => {
@@ -36,7 +34,6 @@ export const updateItemHandler = (updateBtn) => {
         const data = new FormData(form);
         updateItem(itemId, data);
         form.reset();
-        console.log("execute submit");
         dialog.removeEventListener("submit", onUpdateSubmit);
     }
 };

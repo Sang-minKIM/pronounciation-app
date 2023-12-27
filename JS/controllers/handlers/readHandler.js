@@ -1,12 +1,13 @@
 let speechSpeed = 1.0;
 
-export const readItemHandler = () => {
-    const content = document.getElementById("content").value;
+export const readItemHandler = (target) => {
+    const listItem = target.closest(".item");
+    const sentence = listItem.querySelector(".item__text").textContent;
 
     // Web Speech API를 지원하는지 확인
     if ("speechSynthesis" in window) {
         const speech = new SpeechSynthesisUtterance();
-        speech.text = content;
+        speech.text = sentence;
         speech.lang = "ko-KR";
         speech.rate = speechSpeed;
         window.speechSynthesis.speak(speech);
