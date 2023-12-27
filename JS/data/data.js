@@ -1,5 +1,5 @@
 export const listData = {
-    todo: [],
+    todo: ["item1"],
     /*will update
         done:[]
     */
