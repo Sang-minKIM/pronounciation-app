@@ -12,6 +12,7 @@ body {
     /* color: var(--darkgreen); */
     color: white;
     padding: 1.25rem 0;
+    overflow-y: hidden;
 }
 
 .menu {
