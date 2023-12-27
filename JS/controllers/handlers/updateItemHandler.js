@@ -8,6 +8,7 @@ const updateItemData = (updatedItemId, formData) => {
     const text = formData.get("text");
 
     itemData[updatedItemId] = { ...itemData[updatedItemId], text };
+    localStorage.setItem("itemData", JSON.stringify(itemData));
 };
 
 const updateItem = (updatedItemId, formData) => {

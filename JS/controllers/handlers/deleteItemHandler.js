@@ -1,9 +1,11 @@
-import { listData } from "../../data/data";
+import { itemData, listData } from "../../data/data";
 import { renderList } from "../../views/render";
 
 const deleteItemData = (deletedItemId, listId) => {
     const newItemList = [...listData[listId]].filter((itemId) => itemId != deletedItemId);
+    delete itemData[deletedItemId];
     listData[listId] = newItemList;
+    localStorage.setItem("listData", JSON.stringify(listData));
 };
 
 const deleteItem = (target) => {

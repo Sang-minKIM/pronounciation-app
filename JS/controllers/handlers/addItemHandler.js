@@ -9,6 +9,8 @@ let listId = "todo";
 const addItemData = (newItem) => {
     listData[listId].push(newItem.id);
     itemData[newItem.id] = newItem;
+    localStorage.setItem("listData", JSON.stringify(listData));
+    localStorage.setItem("itemData", JSON.stringify(itemData));
 };
 
 const addItem = (itemFormData) => {
