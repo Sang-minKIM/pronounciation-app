@@ -3,7 +3,7 @@
 
 body {
   width: 100vw;
-  height: 100vh;
+  height: calc(var(--vh, 1vh) * 100);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,7 +12,7 @@ body {
   /* color: var(--darkgreen); */
   color: white;
   padding: 1.25rem 0;
-  overflow-y: hidden;
+
   touch-action: none;
   position: fixed;
 }
