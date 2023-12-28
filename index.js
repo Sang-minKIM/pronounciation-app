@@ -8,9 +8,11 @@ function setScreenSize() {
   //그런 다음 --vh 사용자 정의 속성의 값을 문서의 루트로 설정합니다.
   document.documentElement.style.setProperty("--vh", `${vh}px`);
 }
+
 window.addEventListener("resize", setScreenSize);
 
 (function () {
+  setScreenSize();
   initMenu();
   initList();
   initModal();
