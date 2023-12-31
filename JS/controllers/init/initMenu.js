@@ -1,4 +1,5 @@
 import { menuProps } from "../../data/props";
+import { MenuView } from "../../views/MenuView";
 import { onMenuClick } from "../event/onClick";
 
 const menu = document.querySelector(".menu");
