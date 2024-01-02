@@ -1,0 +1,38 @@
+.menu {
+  width: 90%;
+  height: 30%;
+  max-width: 720px;
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.add-item {
+  width: 100%;
+  height: 3.125rem;
+  background-color: var(--green);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
+
+.menu__speed {
+  width: 100%;
+  height: 3.125rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.menu__speed__text {
+  color: var(--darkgreen);
+}
+
+.menu__speed button {
+  width: 3.125rem;
+  height: 3.125rem;
+  background-color: var(--green);
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
+}
