@@ -1,12 +1,15 @@
 .read-list {
   width: 90%;
   height: 70%;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  align-items: center;
+  align-items: center; 
   min-width: 300px;
-  max-width: 720px;
+  max-width: 720px; */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-rows: repeat(5, 1fr);
   overflow-y: scroll;
   touch-action: pan-y;
   gap: 20px;
